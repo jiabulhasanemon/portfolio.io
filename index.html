@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Muhammad Jiabul Hasan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="islamic-pattern top"></div>
+    <div class="islamic-pattern bottom"></div>
+
+    <div class="welcome-message">
+        <h2>ASSALAMU ALAIKUM</h2>
+        <p>WELCOME TO MY PROFESSIONAL WEBSITE</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Me</a>
+            <a href="#skills" class="nav-link">My Skills</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="bismillah">﷽</div>
+                <div class="name-container">
+                    <h1 class="first-name animated-text">MUHAMMAD</h1>
+                    <h1 class="last-name animated-text">JIABUL HASAN</h1>
+                </div>
+                <div class="title-container">
+                    <p class="title">Web Designer & Developer</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                        <a href="#skills" class="btn secondary-btn">View My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-title">
+                <h2>ABOUT ME</h2>
+            </div>
+            <div class="about-content">
+                <div class="islamic-quote">
+                    <p class="arabic">"وَقُل رَّبِّ زِدْنِي عِلْمًا"</p>
+                    <p class="translation">"My Lord, increase me in knowledge" - Surah Taha, 20:114</p>
+                </div>
+                <p>A passionate web developer with a creative mindset and a dedication to building beautiful, functional websites.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <h2>Progress Bar And Circular with Counter Up | Using HTML CSS for World Best Professional Service Website</h2>
+        <section id="skills" class="skills">
+            <div class="section-title">
+                <h2>MY SKILLS</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>HTML</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <div class="counter" data-count="90">0</div>
+                </div>
+                <div class="skill">
+                    <h3>CSS</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <div class="counter" data-count="85">0</div>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                    <div class="counter" data-count="75">0</div>
+                </div>
+            </div>
+            <style>
+                #skills {
+                    margin: 20px 0;
+                    font-family: Arial, sans-serif;
+                }
+                .skill {
+                    margin: 10px 0;
+                }
+                .progress-bar {
+                    background: #f3f3f3;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    height: 20px;
+                }
+                .progress {
+                    background: #4caf50;
+                    height: 100%;
+                    transition: width 1s;
+                }
+                .counter {
+                    font-size: 20px;
+                    margin-top: 5px;
+                }
+            </style>
+            <script>
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-count');
+                        const count = +counter.innerText;
+                        const increment = target / 100;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 10);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            </script>
+        </section>
+    
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-title">
+                <h2>CONTACT ME</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contact Me</h2>
+                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/your-number" target="_blank">+1234567890</a></p>
+                    <p>Location: Your City, Your Country</p>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Me</h2>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                <style>
+                    .contact-info, .contact-form {
+                        margin: 20px 0;
+                        font-family: Arial, sans-serif;
+                    }
+                    .contact-info h2, .contact-form h2 {
+                        margin-bottom: 10px;
+                    }
+                    .contact-info p, .contact-form label {
+                        margin: 5px 0;
+                    }
+                    .contact-form input, .contact-form textarea {
+                        width: 100%;
+                        padding: 8px;
+                        margin-bottom: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    }
+                    .contact-form .submit-btn {
+                        background-color: #4caf50;
+                        color: white;
+                        padding: 10px 15px;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                </style>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const successMessage = document.getElementById('successMessage');
+            const step1 = successMessage.querySelector('.step-1');
+            const step2 = successMessage.querySelector('.step-2');
+            const senderName = successMessage.querySelector('.sender-name');
+            
+            // Update sender name
+            senderName.textContent = `Dear ${name},`;
+            
+            // Show success message and step 1
+            successMessage.classList.remove('hidden');
+            step1.classList.remove('hidden');
+            step2.classList.add('hidden');
+            
+            // Show step 2 after 3 seconds
+            setTimeout(() => {
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+            }, 3000);
+            
+            // Clear form
+            event.target.reset();
+            
+            // Hide success message after 8 seconds total
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+                // Reset steps for next time
+                setTimeout(() => {
+                    step1.classList.remove('hidden');
+                    step2.classList.add('hidden');
+                }, 500);
+            }, 8000);
+            
+            return false;
+        }
+
+        // Add event listener to contact form
+        document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+    </script>
+</body>
+</html>
